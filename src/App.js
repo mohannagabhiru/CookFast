@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import CategoryItems from './pages/CategoryItems';
 import Home from './pages/Home';
+import MealDetails from './pages/MealDetails';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/Details' element={<h1>Next</h1>}/>
         <Route path = "/meal/category/:name" element = {<CategoryItems />} />
-
+        <Route path = "/meal/:id" element = {<MealDetails />} />
         {/* <h1>hii</h1> */}
       </Routes>
     </div>

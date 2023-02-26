@@ -6,10 +6,9 @@ import FoodBankIcon from '@mui/icons-material/FoodBank';
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <AppBar position="static" sx={{bgcolor:'#ff9800'}}>
       <Toolbar>
       <FoodBankIcon />
-     
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           CookFast
         </Typography>

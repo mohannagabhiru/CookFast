@@ -6,7 +6,7 @@ const CategoriesCard = ({ categories }) => {
   return (
     <Grid container spacing={2}>
     {categories.map((item, index) => (
-      <Grid item xs={12} sm={6} md={4} key={index}>
+      <Grid item xs={12} sm={6} md={3} key={index}>
         <Link to = {`/meal/category/${item?.strCategory}`} key = {item?.idCategory} style={{textDecoration: 'none'}}>
             <Card sx={{ maxWidth: 240 }}>
             <Box sx={{ position: 'relative' }}>

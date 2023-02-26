@@ -7,7 +7,7 @@ const CategoryItem = ({ categoryItems }) => {
     <Grid container spacing={2}>
     {categoryItems.map((item, index) => (
       <Grid item xs={12} sm={6} md={3} key={index}>
-        {/* <Link to = {`/meal/category/${item?.strCategory}`} key = {item?.idCategory}> */}
+        <Link to = {`/meal/${item.idMeal}`} key = {item.idMeal} style={{textDecoration: 'none'}}>
             <Card sx={{ maxWidth: 250 }}>
             <Box sx={{ position: 'relative' }}>
             <CardMedia
@@ -38,7 +38,7 @@ const CategoryItem = ({ categoryItems }) => {
                 </Typography> */}
             </CardContent>
             </Card>
-        {/* </Link> */}
+        </Link>
       </Grid>
     ))}
     </Grid>
