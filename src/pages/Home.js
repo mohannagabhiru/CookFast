@@ -11,7 +11,7 @@ import { CATEGORIES_URL, SEARCH_URL } from '../utils/constants'
 const Home = () => {
   const [categories, setCategories] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-  const {meals, setMeals, searchTerm } = useAppContext()
+  const {meals, setMeals, searchTerm, setSearchTerm } = useAppContext()
 
   const fetchCategories = async () => {
     const response = await axios.get(`${CATEGORIES_URL}`);
@@ -22,10 +22,11 @@ const Home = () => {
   }
 
   const fetchSearchItem = async () => {
-    console.log(searchTerm);
+    // console.log(searchTerm);
     const response = await axios.get(`${SEARCH_URL}${searchTerm}`);
     setSearchResults(response.data.meals);
-    console.log(searchResults, "searchResults");
+    setSearchTerm('');
+    // console.log(response.data.meals, "searchResults");
   }
 
   useEffect(() => {
